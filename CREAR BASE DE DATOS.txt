@@ -1,0 +1,14 @@
+ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+CREATE USER prueba3 IDENTIFIED BY prueba3;
+GRANT CONNECT, RESOURCE TO prueba3;
+ALTER USER prueba3 DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+INSERT INTO CORE_CATEGORIA VALUES ('nacional'); --esto es un test
+
+
+/*la página funciona correctamente, la api de tiempo solo funciona en
+google chrome, el problema es que la página registra la noticia en la base de datos
+pero intenté hacer una página para que en una tabla dejase modificar y borrar
+noticias pero no servía de ninguna manera, en la carpeta Pruebas de la página
+muestro screenshots confirmando de que crea la noticia y la guarda en la base,
+solo que no puede imprimirlas (la página tabla.txt es lo que intenté hacer, 
+la pasé a ese formato para que no hubiese error en toda la página) */
